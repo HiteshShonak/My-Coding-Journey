@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="calc-container">
+
+            <div class="display" readonly></div>
+
+
+
+                    <div class="keys operators" onclick="clearDisplay()">C</div>
+                    <div class="keys operators" onclick="squareNumber()">x²</div>
+                    <div class="keys operators" onclick="squareRootNumber()">√x</div>
+                    <div class="keys operators" onclick="appendToDisplay('+')">+</div>
+                    
+                    
+
+                    <div class="keys operands" onclick="appendToDisplay('7')">7</div>
+                    <div class="keys operands" onclick="appendToDisplay('8')">8</div>
+                    <div class="keys operands" onclick="appendToDisplay('9')">9</div>
+                    <div class="keys operators" onclick="appendToDisplay('-')">-</div>
+
+
+                    <div class="keys operands" onclick="appendToDisplay('4')">4</div>
+                    <div class="keys operands" onclick="appendToDisplay('5')">5</div>
+                    <div class="keys operands" onclick="appendToDisplay('6')">6</div>
+                    <div class="keys operators" onclick="appendToDisplay('*')">*</div>
+
+                    <div class="keys operands" onclick="appendToDisplay('1')">1</div>
+                    <div class="keys operands" onclick="appendToDisplay('2')">2</div>
+                    <div class="keys operands" onclick="appendToDisplay('3')">3</div>
+                    <div class="keys operators" onclick="appendToDisplay('/')">/</div>
+
+                    <div class="keys operands" onclick="appendToDisplay('00')">00</div>
+                    <div class="keys operands" onclick="appendToDisplay('0')">0</div>
+                    <div class="keys operands" onclick="appendToDisplay('.')">.</div>
+                    <div class="keys operators" onclick="Calculate()">=</div>
+
+
+
+
+
+                    <script src="script.js"></script>
+        </div>
+
+    </div>
+    
+</body>
+</html>
