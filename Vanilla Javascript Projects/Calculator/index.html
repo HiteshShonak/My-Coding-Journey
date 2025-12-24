@@ -4,54 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
+    <div class="overlay" onclick="toggleHistory()"></div>
+
+    <div class="main-wrapper">
+
+        <div class="history-sidebar" id="historySidebar">
+            <div class="history-header">
+                <span>Tape History</span>
+                <button class="close-btn" onclick="toggleHistory()">×</button>
+            </div>
+            <div class="history-list" id="historyList">
+                <p class="empty-msg">Start calculating...</p>
+            </div>
+            <button class="clear-history-btn" onclick="clearHistory()">Clear Tape</button>
+        </div>
 
         <div class="calc-container">
+            <div class="top-controls">
+                <button class="history-trigger" onclick="toggleHistory()" title="History">H</button>
+            </div>
 
-            <div class="display" readonly></div>
+            <div class="display"></div>
 
+            <div class="keys operators" onclick="clearDisplay()">C</div>
+            <div class="keys operators" onclick="squareNumber()">x²</div>
+            <div class="keys operators" onclick="squareRootNumber()">√x</div>
+            <div class="keys operators" onclick="appendToDisplay('/')">/</div>
+            
+            <div class="keys operands" onclick="appendToDisplay('7')">7</div>
+            <div class="keys operands" onclick="appendToDisplay('8')">8</div>
+            <div class="keys operands" onclick="appendToDisplay('9')">9</div>
+            <div class="keys operators" onclick="appendToDisplay('*')">*</div>
 
+            <div class="keys operands" onclick="appendToDisplay('4')">4</div>
+            <div class="keys operands" onclick="appendToDisplay('5')">5</div>
+            <div class="keys operands" onclick="appendToDisplay('6')">6</div>
+            <div class="keys operators" onclick="appendToDisplay('-')">-</div>
 
-                    <div class="keys operators" onclick="clearDisplay()">C</div>
-                    <div class="keys operators" onclick="squareNumber()">x²</div>
-                    <div class="keys operators" onclick="squareRootNumber()">√x</div>
-                    <div class="keys operators" onclick="appendToDisplay('+')">+</div>
-                    
-                    
+            <div class="keys operands" onclick="appendToDisplay('1')">1</div>
+            <div class="keys operands" onclick="appendToDisplay('2')">2</div>
+            <div class="keys operands" onclick="appendToDisplay('3')">3</div>
+            <div class="keys operators" onclick="appendToDisplay('+')">+</div>
 
-                    <div class="keys operands" onclick="appendToDisplay('7')">7</div>
-                    <div class="keys operands" onclick="appendToDisplay('8')">8</div>
-                    <div class="keys operands" onclick="appendToDisplay('9')">9</div>
-                    <div class="keys operators" onclick="appendToDisplay('-')">-</div>
-
-
-                    <div class="keys operands" onclick="appendToDisplay('4')">4</div>
-                    <div class="keys operands" onclick="appendToDisplay('5')">5</div>
-                    <div class="keys operands" onclick="appendToDisplay('6')">6</div>
-                    <div class="keys operators" onclick="appendToDisplay('*')">*</div>
-
-                    <div class="keys operands" onclick="appendToDisplay('1')">1</div>
-                    <div class="keys operands" onclick="appendToDisplay('2')">2</div>
-                    <div class="keys operands" onclick="appendToDisplay('3')">3</div>
-                    <div class="keys operators" onclick="appendToDisplay('/')">/</div>
-
-                    <div class="keys operands" onclick="appendToDisplay('00')">00</div>
-                    <div class="keys operands" onclick="appendToDisplay('0')">0</div>
-                    <div class="keys operands" onclick="appendToDisplay('.')">.</div>
-                    <div class="keys operators" onclick="Calculate()">=</div>
-
-
-
-
-
-                    <script src="script.js"></script>
+            <div class="keys operands" onclick="appendToDisplay('00')">00</div>
+            <div class="keys operands" onclick="appendToDisplay('0')">0</div>
+            <div class="keys operands" onclick="appendToDisplay('.')">.</div>
+            <div class="keys operators equals-btn" onclick="Calculate()">=</div>
         </div>
 
     </div>
     
+    <script src="script.js"></script>
 </body>
 </html>
