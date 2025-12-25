@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    margin:0;
+    background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+    max-width: 90%; 
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.gameContainer:hover {
+    transform: scale(1.01);
+}
+
+
+#heading{
+    font-size: clamp(2rem, 6vw, 5rem);
+    margin: 10px;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+
+.options{
+    display: flex;
+    gap: 50px;
+}
+
+.options div{
+    border: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+    font-size: clamp(3rem, 12vw, 10rem);
+    max-height: max-content;
+    max-width: max-content;
+    border-radius: 50%;
+}
+
+.defaultOptions{
+    background-color: hsla(191, 80%, 51%, 0.482);
+}
+
+.options div:hover{
+    filter: brightness(110%);
+}
+
+.options div:active{
+    filter: brightness(130%);
+}
+
+.playerScore, .compScore{
+    font-size: clamp(1.2rem, 4vw, 2rem);
+}
+
+.playerResult, .compResult{
+    font-size: clamp(1.2rem, 4vw, 2rem);
+}
+
+.playerResult{
+    color: hsla(120, 65%, 34%, 0.352);
+}
+.compResult{
+    color: tomato;
+}
+
+.bothResult{
+    color: hsla(191, 87%, 32%, 0.482);
+}
+
+.result{
+    font-size: clamp(2.4rem, 8vw, 4rem);
+    height: 80px;
+}
+
+
+/* Background Color for options upon who chooses */
+.compChoice{
+    background-color: tomato;
+}
+
+.playerChoice{
+    background-color: hsla(120, 65%, 34%, 0.352);
+}
+
+.bothChoice{
+    background-color: #d9afd9;
+}
+
+
+/* Footer */
+.footer{
+    text-align: center;
+}
+
+
+/*Responsiveness */
+@media (max-width: 600px) {
+    .gameContainer {
+        padding: 15px;
+    }
+    
+    .options {
+        gap: 15px;
+    }
+}
+
