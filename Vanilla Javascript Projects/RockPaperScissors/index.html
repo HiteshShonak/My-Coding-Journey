@@ -3,31 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock-Paper-Scissors</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+
+    <div class="main-wrapper">
         <div class="gameContainer">
-            <h1 id="heading">ROCK🪨 PAPER📄 SCISSORS✂️</h1>
-            <div class="options">
-                <div id="rock" class="defaultOptions">👊</div>
-                <div id="paper" class="defaultOptions">🤚</div>
-                <div id="scissors" class="defaultOptions">✌️</div>
+            
+            <div class="header-section">
+                <button class="rules-btn" onclick="openRules()" title="How to play">?</button>
                 
+                <h1 id="heading">RPS BATTLE</h1>
+                
+                <div class="stats-bar">
+                    <div class="stat-box">
+                        <span class="stat-label">Streak</span>
+                        <span class="stat-value" id="currentStreak">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Best</span>
+                        <span class="stat-value" id="bestStreak">0</span>
+                    </div>
+                </div>
             </div>
-            <span class="playerScore">Player Score: <span class="playerResult">0</span></span>
-            <span class="compScore">Computer Score: <span class="compResult">0</span></span>
 
-            <div class="result"></div>
+            <div class="game-area">
+                <div class="options">
+                    <button id="rock" class="game-btn" title="Rock">👊</button>
+                    <button id="paper" class="game-btn" title="Paper">🤚</button>
+                    <button id="scissors" class="game-btn" title="Scissors">✌️</button>
+                </div>
 
+                <div class="play-again-container" id="playAgainContainer">
+                    <button class="challenge-btn" onclick="resetRound()">🔄 Challenge Again</button>
+                </div>
+            </div>
+
+            <div class="result-area">
+                <div class="result-message" id="resultMsg">Choose your weapon</div>
+                
+                <div class="score-board">
+                    <div class="score-item">
+                        <span class="score-label">YOU</span>
+                        <span class="playerResult">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">COMP</span>
+                        <span class="compResult">0</span>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
+
+    <div class="modal-overlay" id="rulesModal" onclick="closeRules(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📜 Rule Book</h2>
+                <button class="close-modal" onclick="closeRules(event)">×</button>
+            </div>
+            <div class="rules-list">
+                <div class="rule-item">
+                    <span class="rule-icon">👊</span>
+                    <span class="rule-text"><strong>Rock</strong> beats <strong>Scissors</strong></span>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-icon">🤚</span>
+                    <span class="rule-text"><strong>Paper</strong> beats <strong>Rock</strong></span>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-icon">✌️</span>
+                    <span class="rule-text"><strong>Scissors</strong> beats <strong>Paper</strong></span>
+                </div>
+            </div>
+            <div class="streak-note">
+                <p>🔥 <strong>Streak Rule:</strong> One loss resets your streak to zero!</p>
+            </div>
+        </div>
+    </div>
     
-
-
-    <footer class="footer">Made with ❤️ by Hitesh.</footer>
+    <footer class="footer">Day 2: Logic & Randomization</footer>
     <script src="script.js"></script>
 </body>
 </html>
