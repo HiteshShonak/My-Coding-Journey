@@ -1,4 +1,4 @@
-# Tactile Calculator 🧮
+# Calculator 🧮
 
 A mobile-responsive calculator featuring a persistent tape history, tactile button feedback, and local state management.
 

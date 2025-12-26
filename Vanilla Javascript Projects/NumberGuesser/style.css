@@ -1,0 +1,110 @@
+        body{
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+        }
+
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+    
+            padding: 10px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+            max-width: 90%;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
+            transform: scale(1.01);
+        }
+
+
+
+        .game-title{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        
+        .randNumber{
+            border-radius: 20px;
+            border: 2px solid black;
+            max-width: max-content;
+            font-size: 160px;
+            margin-bottom: 10px;
+            user-select: none;        
+            -webkit-user-select: none; 
+            -moz-user-select: none;    
+            -ms-user-select: none;  
+            
+        }
+        .randNumberBluring{
+            filter: blur(30px);
+        }
+
+        .guess{
+            border-radius: 20px;
+            text-align: center;
+            font-size: 2em;
+            padding: 5px;
+            max-width: 200px;
+
+        }
+
+        .guess{
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.15); 
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #ffffff;
+            text-align: center;
+            outline: none;
+            transition: 0.3s;
+            color: #f1e4f3;
+            opacity: 0.7;
+        }
+
+        .submit-btn {
+            font-size: 1.8em;
+            border-radius: 20px;
+            margin-left: 10px;
+            padding: 5px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: #ffffff;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            max-width:max-content;
+            max-height: max-content;
+            font-size: 1.8em;
+
+        }
+
+        .correctGuess{
+            color: rgb(70, 228, 70);
+            font-size: 2em;
+        }
+        .incorrectGuess{
+            color: red;
+            font-size: 2em;
+        }

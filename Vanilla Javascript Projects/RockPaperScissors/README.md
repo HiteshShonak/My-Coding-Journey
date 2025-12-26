@@ -1,4 +1,4 @@
-# Neon Rock Paper Scissors 👊🤚✌️
+# Rock Paper Scissors 👊🤚✌️
 
 A responsive, fully interactive Rock Paper Scissors game featuring a glassmorphism UI, streak tracking, and persistent scoring.
 
