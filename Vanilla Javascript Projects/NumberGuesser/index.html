@@ -7,21 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
 
-    <div class="card">
+    <div class="main-wrapper">
+        <div class="card">
+            
+            <h1 class="game-title">Number Guessing Game🎯</h1>
+            <h3>Guess a Number Between 1 and 100</h3>
 
-    <h1 class="game-title">Number Guessing Game🎯</h1>
-    <h3>Guess a Number Between 1 and 100</h3>
+            <div class="stats-bar">
+                <div class="stat-box">
+                    <span>Attempts:</span>
+                    <strong id="attempts">0</strong>
+                </div>
+                <div class="stat-box">
+                    <span>Best:</span>
+                    <strong id="bestScore">-</strong>
+                </div>
+            </div>
 
-    <div class="randNumber randNumberBluring">69</div>
-    <div class="SubmitGuess">
+            <div class="randNumber randNumberBluring">?</div>
+            
+            <div class="SubmitGuess">
+                <input type="number" class="guess" placeholder="Guess">
+                <button class="submit-btn" id="submitBtn">✔️</button>
+            </div>
 
-    <input type="number" class="guess" placeholder="Guess">
-    <button class="submit-btn">✔️</button>
-    
-    </div><pre class="ComputerResponse"></pre>
-    </div>
+            <div class="ComputerResponse"></div>
+
+            <div class="restart-container" id="restartContainer">
+                <button class="restart-btn" onclick="resetGame()">🔄 Play Again</button>
+            </div>
+
+        </div>
     </div>
 
     <script src="script.js"></script>

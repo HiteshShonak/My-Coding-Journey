@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1 id="heading">PASSWORD GENERATOR</h1>
+
+        <div class="result-container">
+            <input type="text" class="generatedPassword" placeholder="Result here..." readonly>
+            <button class="copy-btn" id="copyBtn" title="Copy">📋</button>
+        </div>
+
+        <div class="length-wrapper">
+            <input type="number" class="inputPassword" id="lengthInput" value="16" min="4" max="50">
+            <input type="range" id="lengthSlider" min="4" max="50" value="16">
+        </div>
+
+        <div class="options-container">
+            <label class="option" for="includeLower">Include Lower Case
+                <input type="checkbox" id="includeLower" checked>
+                <span class="switch"></span>
+            </label>
+
+            <label class="option" for="includeUpper">Include Upper Case
+                <input type="checkbox" id="includeUpper" checked>
+                <span class="switch"></span>
+            </label>
+
+            <label class="option" for="includeDigits">Include Digits
+                <input type="checkbox" id="includeDigits" checked>
+                <span class="switch"></span>
+            </label>
+
+            <label class="option" for="includeSpecials">Include Special Symbols
+                <input type="checkbox" id="includeSpecials" checked>
+                <span class="switch"></span>
+            </label>
+        </div>
+
+        <button class="generate" id="generateBtn">Generate</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
