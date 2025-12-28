@@ -6,42 +6,68 @@
     <title>PokeDex</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/pokeball.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    
     <main class="container">
         <article class="card">
             <header>
-            <h1 id="heading">POKE DEX</h1>
+                <h1 id="heading">POKÉDEX</h1>
             </header>
-                <img src="" alt="" class="pokemonImage">
-            
 
+            <div class="image-container">
+                <img src="./assets/pikachu.png" alt="" class="pokemonImage" id="pokeImg">
+                <button class="shiny-btn" id="shinyBtn" title="Toggle Shiny ✨">✨</button>
+            </div>
 
             <section class="pokemonInfo">
-                <div class="pokemonNameDisplay">Name: <span class="pokemonName"></span></div>
-                <div class="pokemonTypeDisplay">Type: <span class="pokemonType"></span></div>
+                <h2 class="pokemonName">Loading...</h2>
+                <div class="types-container" id="typesContainer"></div>
             </section>
 
-
             <section class="pokemonStats">
-                <div class="pokemonHPDisplay">HP: <span class="pokemonHP"></span></div>
-                <div class="pokemonAttackDisplay">Attack: <span class="pokemonAttack"></span></div>
-                <div class="pokemonDefenceDisplay">Defence: <span class="pokemonDefence"></span></div>
-                <div class="pokemonSpeedDisplay">Speed: <span class="pokemonSpeed"></span></div>
+                <div class="stat-row">
+                    <span class="stat-label">HP</span>
+                    <div class="bar-container">
+                        <div class="bar-fill hp-fill" id="hpBar" style="width: 0%"></div>
+                    </div>
+                    <span class="stat-num" id="hpVal">0</span>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">ATK</span>
+                    <div class="bar-container">
+                        <div class="bar-fill atk-fill" id="atkBar" style="width: 0%"></div>
+                    </div>
+                    <span class="stat-num" id="atkVal">0</span>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">DEF</span>
+                    <div class="bar-container">
+                        <div class="bar-fill def-fill" id="defBar" style="width: 0%"></div>
+                    </div>
+                    <span class="stat-num" id="defVal">0</span>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">SPD</span>
+                    <div class="bar-container">
+                        <div class="bar-fill spd-fill" id="spdBar" style="width: 0%"></div>
+                    </div>
+                    <span class="stat-num" id="spdVal">0</span>
+                </div>
             </section>
 
             <section class="searchAndSubmit">
-            <input type="text" class="pokemonSearch" placeholder="PokeName">
-            <button class="searchBtn">Search</button>
-            
-            <p id="warningMessage" aria-live="polite"></p>
+                <input type="text" class="pokemonSearch" placeholder="Enter Pokemon Name...">
+                <button class="searchBtn">Search</button>
             </section>
+            
         </article>
     </main>
 
-    <footer class="cardFooter">
-    <p>Made with ❤️ by Hitesh</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
