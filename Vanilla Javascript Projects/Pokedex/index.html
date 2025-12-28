@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeDex</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/pokeball.png" type="image/png">
+</head>
+<body>
+    <main class="container">
+        <article class="card">
+            <header>
+            <h1 id="heading">POKE DEX</h1>
+            </header>
+                <img src="" alt="" class="pokemonImage">
+            
+
+
+            <section class="pokemonInfo">
+                <div class="pokemonNameDisplay">Name: <span class="pokemonName"></span></div>
+                <div class="pokemonTypeDisplay">Type: <span class="pokemonType"></span></div>
+            </section>
+
+
+            <section class="pokemonStats">
+                <div class="pokemonHPDisplay">HP: <span class="pokemonHP"></span></div>
+                <div class="pokemonAttackDisplay">Attack: <span class="pokemonAttack"></span></div>
+                <div class="pokemonDefenceDisplay">Defence: <span class="pokemonDefence"></span></div>
+                <div class="pokemonSpeedDisplay">Speed: <span class="pokemonSpeed"></span></div>
+            </section>
+
+            <section class="searchAndSubmit">
+            <input type="text" class="pokemonSearch" placeholder="PokeName">
+            <button class="searchBtn">Search</button>
+            
+            <p id="warningMessage" aria-live="polite"></p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="cardFooter">
+    <p>Made with ❤️ by Hitesh</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
