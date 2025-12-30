@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+.CurrencyCard {
+    width: 100%;
+    max-width: 100%;
+}
+
+.CurrencyCard select {
+    cursor: pointer;
+}
