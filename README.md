@@ -21,7 +21,6 @@ I have organized my learning path into specific modules.
 | :--- | :--- | :--- |
 | **`/Vanilla-Javascript-Projects`** | DOM & Logic | Vanilla JS, ES6+, HTML5, CSS3 |
 | **`/React-Projects`** | Frontend UI/UX | React, Tailwind CSS, Redux Toolkit, Hooks |
-| **`/Java-Projects`** | DSA & Systems | Java, OOPs, Algorithms |
 | **`/Backend-Node-Projects`** *(Coming Soon)* | Server & DB | Node.js, Express, MongoDB, JWT |
 
 ---
@@ -44,11 +43,6 @@ I have organized my learning path into specific modules.
 - [ ] **Theme Switcher**
 - [ ] **Blog Website** (Mega Project)
 
-### 🔹 Phase 3: Java & Backend Logic
-*Strengthening core concepts and system design.*
-- [ ] **Banking System**
-- [ ] **Quiz Game**
-- [ ] **Backend API** (In Progress)
 
 ---
 
@@ -60,9 +54,6 @@ Since this is a monorepo, each project is self-contained.
 2. Open `index.html` in your browser (or use Live Server).
 3. *For React projects, run `npm install` and `npm run dev`.*
 
-**For Java Projects:**
-1. Navigate to the folder: `cd Java-Projects`
-2. Compile and run: `javac Filename.java && java Filename`
 
 ---
 
